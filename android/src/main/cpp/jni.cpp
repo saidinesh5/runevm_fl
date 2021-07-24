@@ -119,7 +119,7 @@ Java_ai_hotg_runevm_1fl_RunevmFlPlugin_runRune(JNIEnv *env, jobject thiz, jbyteA
     if(!optData)
         return NULL;
 
-    const auto optJson = runic_common::callRune(optData->data(), optData->size());
+    const auto optJson = runic_common::callRune({optData->data()}, {optData->size()});
     if(!optJson)
         return NULL;
 
